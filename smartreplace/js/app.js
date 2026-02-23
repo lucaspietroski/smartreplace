@@ -4,8 +4,8 @@ let modoContingencia = false;
 let ultimoResultado = [];
 
 async function carregarDados() {
-  baseDados = await fetch('/data/base.json').then(r => r.json());
-  config = await fetch('/data/config.json').then(r => r.json());
+  baseDados = await fetch('data/base.json').then(r => r.json());
+  config = await fetch('data/config.json').then(r => r.json());
 
   const select = document.getElementById("modeloSelect");
   select.innerHTML = "";
@@ -157,4 +157,5 @@ function exportarPDF() {
 
   html2pdf().set(opcoes).from(elemento).save();
 }
+
 
