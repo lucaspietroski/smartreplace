@@ -1,0 +1,8 @@
+{
+  "scoreMinimo": 60,
+  "pesoTecnico": 70,
+  "pesoEstrategico": 30,
+  "pesoEstoque": 15,
+  "pesoPrioridade": 10,
+  "penalidadeDescontinuado": -10
+}
