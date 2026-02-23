@@ -1,0 +1,193 @@
+/* ===========================
+   PALETA SELBETTI
+=========================== */
+:root {
+  --bg-main: #1B423E;
+  --title-color: #FFFFFF;
+  --text-secondary: #CFE5E2;
+  --btn-primary: #F37021;
+  --btn-hover: #d85f18;
+  --match: #0E8980;
+  --divergente: #F37021;
+  --card-bg: rgba(0, 0, 0, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+/* ===========================
+   BODY + BACKGROUND
+=========================== */
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #FFFFFF;
+
+  background-image:
+    linear-gradient(to right, 
+      rgba(27,66,62,0.95) 0%, 
+      rgba(27,66,62,0.92) 40%, 
+      rgba(27,66,62,0.75) 70%, 
+      rgba(27,66,62,0.65) 100%
+    ),
+    url('img/background-selbetti.png');
+
+  background-size: cover;
+  background-position: 70% center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+@media print {
+  .score,
+  .ideal,
+  .seguro,
+  .viavel,
+  .contingencia {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  .simulator,
+  button,
+  .logo-header {
+    display: none;
+  }
+
+  .card {
+    background: #1B423E !important;
+    color: white !important;
+  }
+}
+
+
+
+/* ===========================
+   CONTAINER
+=========================== */
+.container {
+  padding: 15px;
+  max-width: 1200px;
+}
+
+/* ===========================
+   LOGO
+=========================== */
+.logo-header {
+  margin-bottom: 10px;
+}
+
+.logo-header img {
+  height: 155px;
+  width: auto;
+  display: block;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+.simulator,
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(6px);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* ===========================
+   INPUTS
+=========================== */
+select, input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  color: white;
+  margin-right: 10px;
+}
+
+select:focus,
+input:focus {
+  outline: none;
+  border-color: var(--match);
+}
+
+select option {
+  background: #1B423E;
+  color: white;
+}
+
+/* ===========================
+   BOTÕES
+=========================== */
+button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--btn-primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--btn-hover);
+  transform: translateY(-2px);
+}
+
+.btn-contingencia {
+  background-color: #DC2626;
+}
+
+/* ===========================
+   TABELAS
+=========================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th {
+  background: rgba(255,255,255,0.05);
+  padding: 12px;
+  text-align: left;
+  color: var(--text-secondary);
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 35px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 25px;
+  }
+
+  .logo-header img {
+    height: 50px;
+  }
+}
